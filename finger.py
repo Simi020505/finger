@@ -1,5 +1,6 @@
 import cv2
 import mediapipe as mp
+import keyboard
 
 cap = cv2.VideoCapture(0)
 mpHands = mp.solutions.hands
@@ -24,3 +25,5 @@ while True:
 
             cv2.imshow("Output", image)
             cv2.waitKey(1)
+    if keyboard.is_pressed('q'):
+            break
